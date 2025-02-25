@@ -92,9 +92,9 @@ module DramController_Verilog (
 		parameter Issue3NOP    = 5'h10;
 		parameter wait3NOP_Re = 5'h11;
 		parameter IssueReadCommand = 5'h12;
-		parameter waitUDS_LDS = 5'h13;
+		parameter wait_Burst_write = 5'h13;
 		parameter WaitCASLatency = 5'h14;
-	        parameter Wait1Clock = 5'h15;
+	        parameter read_Burst = 5'h15;
 		parameter waitTerminate = 5'h16;		
 		
 		// TODO - Add your own states as per your own design
@@ -316,7 +316,7 @@ module DramController_Verilog (
 		end
 		else if (CurrentState == load_register) begin
 			Command <= ModeRegisterSet;
-			DramAddress <= 13'h220;
+			DramAddress <= 13'h023; // load the mode register such that we can support burst reads and writes prev value was 220
 			NextState <= Issue3NOPS;
 		end
 		else if (CurrentState == Issue3NOPS) begin
@@ -350,8 +350,11 @@ module DramController_Verilog (
 		            Command <= BankActivate; // activated the row  and the bank of DRAM
 			    if (WE_L) 
 				NextState <= IssueReadCommand; // if write enable_low is high then we should issue a read commmand
-			   else 
-				NextState <= waitUDS_LDS;
+			   else begin 
+			    TimerValue <= 7;
+				TimerLoad_H <= 1;
+				NextState <= wait_Burst_write;
+			   end
 			end
 			else
 			NextState <= Idle1;
@@ -388,7 +391,7 @@ module DramController_Verilog (
 			DramAddress <= {3'b001, Address[9:0]};
 			BankAddress <= BA[1:0];
 			Command <= ReadAutoPrecharge;
-			TimerValue <= 2;
+			TimerValue <= 1;
 			TimerLoad_H <= 1;
 			NextState <= WaitCASLatency;
 			LDQM_O <=  0;
@@ -399,13 +402,14 @@ module DramController_Verilog (
 			LDQM_O <=  0;
 			HDQM_O <=  0;
 			if(TimerDone_H) begin  
-			  DramDataLatch_H <= 1; 
-			  NextState <= waitTerminate;
+			  TimerValue <= 7;
+			  TimerLoad_H <= 1;
+			  NextState <= read_Burst;
 			end 
 			else 
 			  NextState <= WaitCASLatency;
 		end 
-		else if (CurrentState == waitUDS_LDS) begin
+		else if (CurrentState == wait_Burst_write) begin
 			DramAddress <= {3'b001, Address[9:0]};
 			BankAddress <= BA[1:0];
 			LDQM_O <=  0;
@@ -413,15 +417,20 @@ module DramController_Verilog (
 			Command <= WriteAutoPrecharge;
 			FPGAWritingtoSDram_H <= 1;
 			SDramWriteData <= DataIn;
-			NextState <= Wait1Clock;
+			if(TimerDone_H == 1) 									
+				NextState <= waitTerminate;						
+			else
+				NextState <= wait_Burst_write ;
 		end
-		else if (CurrentState == Wait1Clock) begin
+		else if (CurrentState == read_Burst) begin
 			Command <= NOP;
 			LDQM_O <=  0;
 			HDQM_O <=  0;
-			FPGAWritingtoSDram_H <= 1;
-			SDramWriteData <= DataIn;
-			NextState <= waitTerminate;
+			DramDataLatch_H <= 1;
+			if (TimerDone_H == 1) 
+				NextState <= waitTerminate;
+			else
+				NextState <= read_Burst;
 		end
 		else if (CurrentState == waitTerminate) begin
 			Command <= NOP;
