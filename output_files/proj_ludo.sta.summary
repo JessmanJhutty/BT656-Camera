@@ -1,0 +1,293 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'clock_divider:i2c_clock|clk_o'
+Slack : -1.028
+TNS   : -1.028
+
+Type  : Slow 1100mV 85C Model Setup 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.315
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 9.347
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'CLK_50'
+Slack : 12.530
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Setup 'clock_divider:clk25|clk_o'
+Slack : 35.215
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.331
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock_divider:clk25|clk_o'
+Slack : 0.448
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clock_divider:i2c_clock|clk_o'
+Slack : 0.486
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.526
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'CLK_50'
+Slack : 0.681
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 29.546
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.751
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_divider:clk25|clk_o'
+Slack : -0.066
+TNS   : -1.647
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clock_divider:i2c_clock|clk_o'
+Slack : -0.048
+TNS   : -0.742
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLK_50'
+Slack : 0.127
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.761
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 14.901
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clock_divider:i2c_clock|clk_o'
+Slack : -1.051
+TNS   : -1.051
+
+Type  : Slow 1100mV 0C Model Setup 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 2.696
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 9.540
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'CLK_50'
+Slack : 12.491
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'clock_divider:clk25|clk_o'
+Slack : 35.228
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.294
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clock_divider:clk25|clk_o'
+Slack : 0.454
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clock_divider:i2c_clock|clk_o'
+Slack : 0.494
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.539
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'CLK_50'
+Slack : 0.721
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 29.706
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.697
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_divider:i2c_clock|clk_o'
+Slack : -0.114
+TNS   : -1.041
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clock_divider:clk25|clk_o'
+Slack : -0.076
+TNS   : -1.718
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLK_50'
+Slack : 0.078
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.745
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 14.854
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clock_divider:i2c_clock|clk_o'
+Slack : -0.500
+TNS   : -0.500
+
+Type  : Fast 1100mV 85C Model Setup 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 4.712
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'altera_reserved_tck'
+Slack : 12.255
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'CLK_50'
+Slack : 14.606
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'clock_divider:clk25|clk_o'
+Slack : 37.060
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock_divider:clk25|clk_o'
+Slack : 0.167
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clock_divider:i2c_clock|clk_o'
+Slack : 0.188
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.195
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.220
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'CLK_50'
+Slack : 0.303
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 30.659
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.341
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_divider:clk25|clk_o'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clock_divider:i2c_clock|clk_o'
+Slack : 0.171
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLK_50'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.883
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 14.630
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock_divider:i2c_clock|clk_o'
+Slack : -0.463
+TNS   : -0.463
+
+Type  : Fast 1100mV 0C Model Setup 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 5.398
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'altera_reserved_tck'
+Slack : 12.851
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'CLK_50'
+Slack : 15.245
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'clock_divider:clk25|clk_o'
+Slack : 37.275
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clock_divider:clk25|clk_o'
+Slack : 0.154
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clock_divider:i2c_clock|clk_o'
+Slack : 0.172
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 0.176
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'altera_reserved_tck'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'CLK_50'
+Slack : 0.297
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 30.955
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.301
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_divider:clk25|clk_o'
+Slack : 0.163
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clock_divider:i2c_clock|clk_o'
+Slack : 0.185
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLK_50'
+Slack : 0.500
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~FRACTIONAL_PLL|vcoph[0]'
+Slack : 1.666
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'pll_0|sampler_inst|altera_pll_i|general[0].gpll~PLL_OUTPUT_COUNTER|divclk'
+Slack : 3.883
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 14.599
+TNS   : 0.000
+
+------------------------------------------------------------

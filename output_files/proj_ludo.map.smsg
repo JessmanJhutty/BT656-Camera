@@ -1,0 +1,9 @@
+Info (10281): Verilog HDL Declaration information at bt656_decoder.sv(1): object "field" differs only in case from object "Field" in the same scope File: E:/Personal_Project/FPGA_UART/verilog/bt656_decoder.sv Line: 1
+Info (10281): Verilog HDL Declaration information at bt656_decoder.sv(1): object "active_video" differs only in case from object "Active_Video" in the same scope File: E:/Personal_Project/FPGA_UART/verilog/bt656_decoder.sv Line: 1
+Info (10281): Verilog HDL Declaration information at vga_driver.sv(9): object "H_sync" differs only in case from object "H_SYNC" in the same scope File: E:/Personal_Project/FPGA_UART/verilog/vga_driver.sv Line: 9
+Info (10281): Verilog HDL Declaration information at vga_driver.sv(10): object "V_sync" differs only in case from object "V_SYNC" in the same scope File: E:/Personal_Project/FPGA_UART/verilog/vga_driver.sv Line: 10
+Warning (10268): Verilog HDL information at i2cinput.sv(8): always construct contains both blocking and non-blocking assignments File: E:/Personal_Project/FPGA_UART/verilog/i2cinput.sv Line: 8
+Warning (10268): Verilog HDL information at i2c_master.sv(50): always construct contains both blocking and non-blocking assignments File: E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv Line: 50
+Warning (10268): Verilog HDL information at i2c_master.sv(66): always construct contains both blocking and non-blocking assignments File: E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv Line: 66
+Info (10281): Verilog HDL Declaration information at i2c_master.sv(9): object "start" differs only in case from object "START" in the same scope File: E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv Line: 9
+Info (10281): Verilog HDL Declaration information at i2c_master.sv(3): object "read" differs only in case from object "READ" in the same scope File: E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv Line: 3

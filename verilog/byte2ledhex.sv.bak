@@ -1,0 +1,39 @@
+module byte2ledhex(input logic [23:0] data, output logic [6:0] HEX0, output logic [6:0] HEX1, output logic [6:0] HEX2, output logic [6:0] HEX3, output logic [6:0] HEX4, output logic [6:0] HEX5 );
+    logic [6:0]  HEX0_O, HEX1_O; 
+    nibble2hex firstNibble(.nibble(data[3:0]), .HEX(HEX0_O));
+    nibble2hex secondNibble(.nibble(data[7:4]), .HEX(HEX1_O));
+    nibble2hex thirdNibble(.nibble(data[11:8]), .HEX(HEX0_O));
+    nibble2hex fourthNibble(.nibble(data[15:12]), .HEX(HEX1_O));
+    nibble2hex fifthNibble(.nibble(data[19:16]), .HEX(HEX0_O));
+    nibble2hex sixthNibble(.nibble(data[23:20]), .HEX(HEX1_O));
+
+    assign HEX0[6:0] = HEX0_O[6:0];
+    assign HEX1[6:0] = HEX1_O[6:0];
+
+endmodule
+
+
+module nibble2hex(input logic [3:0] nibble, output logic [6:0] HEX);
+    always_comb begin
+        case (nibble[3:0])
+            4'h0: HEX = 7'b0111111;
+            4'h1: HEX = 7'b0000110;
+            4'h2: HEX = 7'b1011011;
+            4'h3: HEX = 7'b0001111;
+            4'h4: HEX = 7'b1100110;
+            4'h5: HEX = 7'b1101101;
+            4'h6: HEX = 7'b1111101;
+            4'h7: HEX = 7'b0000111;
+            4'h8: HEX = 7'b1111111;
+            4'h9: HEX = 7'b1100111;
+            4'hA: HEX = 7'b1110111;
+            4'hB: HEX = 7'b1111100;
+            4'hC: HEX = 7'b0111001;
+            4'hD: HEX = 7'b1011110;
+            4'hE: HEX = 7'b1111001;
+            4'hF: HEX = 7'b1110001;
+            default: HEX = 7'b1110001;
+        endcase
+    end
+
+endmodule

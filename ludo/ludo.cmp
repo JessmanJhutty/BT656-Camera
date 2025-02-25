@@ -1,0 +1,8 @@
+	component ludo is
+		port (
+			clk_clk                        : in  std_logic                    := 'X'; -- clk
+			hex_external_connection_export : out std_logic_vector(7 downto 0);        -- export
+			led_external_connection_export : out std_logic_vector(2 downto 0)         -- export
+		);
+	end component ludo;
+

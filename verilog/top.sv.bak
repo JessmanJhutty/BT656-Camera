@@ -1,0 +1,38 @@
+module top(input logic CLK_50, 
+			  input logic [9:0] SW, 
+			  input logic [3:0] KEYS, 
+			  output logic [6:0] HEX0,
+			  output logic [6:0] HEX1,
+			  output logic [6:0] HEX2,
+			  output logic [6:0] HEX3,
+			  output logic [6:0] HEX4,
+			  output logic [6:0] HEX5,
+			  inout sda,
+			  output scl,
+			  output logic [7:0] red,
+			  output logic [7:0] green,
+			  output logic [7:0] blue,
+			  output logic H_SYNC,
+			  output logic V_SYNC,
+			  output logic vga_blank,
+			  output logic vga_sync,
+			  output logic vga_clk);
+
+	 wire reset, i2c_clk, start, read, clk_25;
+	 wire [7:0] data_to_send, data_to_read,reg_dest;
+
+	 clock_divider #(.DELAY(500)) i2c_clock(.reset(reset), .ref_clk(CLK_50 ), .clk_o(i2c_clk)); // 100kHz
+	 clock_divider #(.DELAY(0)) clk25(.reset(reset), .ref_clk(CLK_50 ), .clk_o(clk_25)); // 25 MHz
+
+	 
+	 i2cinput IN(.SW(SW), .KEYS(KEYS),.reset(reset), .start(start), .read(read), .clk(CLK_50), .data_to_send(data_to_send), .reg_dest(reg_dest));		  
+	 
+	
+    
+	 
+	 i2c_master DUT(.clk(i2c_clk), .reset(reset), .read(read), .data_to_send(data_to_send), .data_to_read(data_to_read), .sda(sda), .scl(scl), .reg_dest(reg_dest), .start(start));
+    byte2ledhex OUT(.data({reg_dest, data_to_send, data_to_read}), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5));
+	 vga_driver TV_OUT(.r(8'hAA), .g(8'hBB), .b(8'hCC), .reset_n(reset), .clk(clk_25), .red(red), .green(green), .blue(blue), .H_sync(H_SYNC), .V_sync(V_SYNC), .vga_blank(vga_blank), .vga_sync(vga_sync), .vga_clock(vga_clk));
+	 
+	 
+endmodule

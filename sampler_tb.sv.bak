@@ -1,0 +1,20 @@
+module sampler_tb();
+
+logic reset, CLK_100, CLK_50;
+
+
+sampler DUT(.refclk(CLK_50), .rst(reset), .outclk_0(CLK_100));
+
+
+ initial begin
+        clk = 1;
+
+        forever begin
+            clk = ~clk;
+            #10;
+        end
+end
+
+
+
+endmodule

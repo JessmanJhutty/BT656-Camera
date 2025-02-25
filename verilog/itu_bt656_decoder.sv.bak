@@ -1,0 +1,26 @@
+module itu_bt656_decoder(input logic TV_HSYNC, input logic TV_VSYNC, input logic [7:0] TV_DATA, 
+								input logic TD_CLK27,
+								input logic reset_n,
+								output logic [23:0] YCbCr,
+								output logic acttive_video,
+								output logic [10:0] sample_counter,
+								output logic [9:0] frame_counter);
+
+
+parameter preamble =  24'hFF0000;
+logic [23:0] prev_sample;
+
+								
+								
+	always @(posedge TD_CLK27 or negedge reset_n) begin
+		if(reset_n) begin
+			prev_sample =  24'h000000;
+			
+		end
+	
+	
+	end
+
+
+
+endmodule

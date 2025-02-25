@@ -1,0 +1,419 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dD:/School/CPEN412/assignment2
+vbt565_decoder
+Z0 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1733110125
+!i10b 1
+!s100 n4RoA9eifY::@7i^`R[PC2
+I^8IAF_U1^I4;o[8zXCM]b0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 !s105 bt656_decoder_sv_unit
+S1
+Z3 dE:/Personal_Project/FPGA_UART/verilog
+w1733110121
+Z4 8E:/Personal_Project/FPGA_UART/verilog/bt656_decoder.sv
+Z5 FE:/Personal_Project/FPGA_UART/verilog/bt656_decoder.sv
+L0 1
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1733110125.000000
+Z7 !s107 E:/Personal_Project/FPGA_UART/verilog/bt656_decoder.sv|
+Z8 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/bt656_decoder.sv|
+!i113 1
+Z9 o-work work -sv
+Z10 tCvgOpt 0
+vbt656_decoder
+R0
+Z11 !s110 1740109936
+!i10b 1
+!s100 UcKg=YGmIVVbZXPi48;8f0
+IAQNSROLQ9zo=59mdlZ`C]2
+R1
+R2
+S1
+R3
+Z12 w1739826895
+R4
+R5
+L0 1
+R6
+r1
+!s85 0
+31
+Z13 !s108 1740109936.000000
+R7
+R8
+!i113 1
+R9
+R10
+vbt656_decoder_tb
+R0
+R11
+!i10b 1
+!s100 VoF4bSNiIJkdK]i0ELWPF1
+I]YomfT04U6kE24SNbQflA3
+R1
+!s105 b656_decoder_tb_sv_unit
+S1
+R3
+w1739825830
+8E:/Personal_Project/FPGA_UART/verilog/b656_decoder_tb.sv
+FE:/Personal_Project/FPGA_UART/verilog/b656_decoder_tb.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/b656_decoder_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/b656_decoder_tb.sv|
+!i113 1
+R9
+R10
+vbyte2ledhex
+R0
+R11
+!i10b 1
+!s100 [NAR;LjO9h<EjV>3PM_aS1
+ICn4==oncU7jiH_S6le^d:3
+R1
+Z14 !s105 byte2ledhex_sv_unit
+S1
+R3
+Z15 w1719377535
+Z16 8E:/Personal_Project/FPGA_UART/verilog/byte2ledhex.sv
+Z17 FE:/Personal_Project/FPGA_UART/verilog/byte2ledhex.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+Z18 !s107 E:/Personal_Project/FPGA_UART/verilog/byte2ledhex.sv|
+Z19 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/byte2ledhex.sv|
+!i113 1
+R9
+R10
+vclock_divider
+R0
+R11
+!i10b 1
+!s100 ?FP<MATfH9XjabPDaeA`Y0
+IU4S_R8BD_BfFZzdhP0bBl3
+R1
+!s105 clock_divider_sv_unit
+S1
+R3
+w1722145547
+8E:/Personal_Project/FPGA_UART/verilog/clock_divider.sv
+FE:/Personal_Project/FPGA_UART/verilog/clock_divider.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/clock_divider.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/clock_divider.sv|
+!i113 1
+R9
+R10
+vdivide_by_9
+R0
+!s110 1740109937
+!i10b 1
+!s100 :]lX1CKNdXFWBMcVk=;g;3
+IM5W70Mf9U_`@e6if^5afA1
+R1
+!s105 divide_by_9_sv_unit
+S1
+R3
+w1739168561
+8E:/Personal_Project/FPGA_UART/verilog/divide_by_9.sv
+FE:/Personal_Project/FPGA_UART/verilog/divide_by_9.sv
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1740109937.000000
+!s107 E:/Personal_Project/FPGA_UART/verilog/divide_by_9.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/divide_by_9.sv|
+!i113 1
+R9
+R10
+vDramController_Verilog
+R0
+R11
+!i10b 1
+!s100 TNUKZQgjUL5aY8Kl:Y4ic3
+IKb0[_R97IibMIWF<k`?4]0
+R1
+Z20 !s105 sdram_controller_sv_unit
+S1
+R3
+w1740109929
+Z21 8E:\Personal_Project\FPGA_UART\verilog\sdram_controller.sv
+Z22 FE:\Personal_Project\FPGA_UART\verilog\sdram_controller.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+Z23 !s107 E:\Personal_Project\FPGA_UART\verilog\sdram_controller.sv|
+Z24 !s90 -reportprogress|300|-work|work|-sv|-stats=none|E:\Personal_Project\FPGA_UART\verilog\sdram_controller.sv|
+!i113 1
+R9
+R10
+n@dram@controller_@verilog
+vI2C_Controller
+R11
+!i10b 1
+!s100 e6gdb^4]nN11LkBWJX:Rn2
+I2g3aZ]fM;SoGn9Wof8Af03
+R1
+R3
+w1719294684
+8E:/Personal_Project/FPGA_UART/verilog/I2C_Controller.v
+FE:/Personal_Project/FPGA_UART/verilog/I2C_Controller.v
+L0 42
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/I2C_Controller.v|
+!s90 -reportprogress|300|-work|work|-stats=none|E:/Personal_Project/FPGA_UART/verilog/I2C_Controller.v|
+!i113 1
+o-work work
+R10
+n@i2@c_@controller
+vi2c_master
+R0
+R11
+!i10b 1
+!s100 HS[ac><]a?gHiSOO<_cl<1
+Iif<i48[choLSW_C<k9>`j3
+R1
+!s105 i2c_master_sv_unit
+S1
+R3
+w1722125301
+8E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv
+FE:/Personal_Project/FPGA_UART/verilog/i2c_master.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv|
+!i113 1
+R9
+R10
+vi2c_master_tb
+R0
+R11
+!i10b 1
+!s100 N<HbN?MhoYFgf20c=>3NJ2
+IMLSnabPSeec9=?hj>5@0h1
+R1
+!s105 proj_ludo_sv_unit
+S1
+R3
+w1719375354
+8E:/Personal_Project/FPGA_UART/verilog/proj_ludo.sv
+FE:/Personal_Project/FPGA_UART/verilog/proj_ludo.sv
+L0 2
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/proj_ludo.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/proj_ludo.sv|
+!i113 1
+R9
+R10
+vi2cinput
+R0
+R11
+!i10b 1
+!s100 2XVJ3_JN0nBHVA3TBCHBI3
+I?a?H^8]ezKBTYzg[PMI5b2
+R1
+!s105 i2cinput_sv_unit
+S1
+R3
+w1719282186
+8E:/Personal_Project/FPGA_UART/verilog/i2cinput.sv
+FE:/Personal_Project/FPGA_UART/verilog/i2cinput.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/i2cinput.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/i2cinput.sv|
+!i113 1
+R9
+R10
+vITU_656_Decoder
+R0
+R11
+!i10b 1
+!s100 Sdn4;S3l4e^Xk7FDhgc:K2
+IYPT1f4Vc0U8T=J2zNXYz92
+R1
+R2
+S1
+R3
+R12
+R4
+R5
+L0 91
+R6
+r1
+!s85 0
+31
+R13
+R7
+R8
+!i113 1
+R9
+R10
+n@i@t@u_656_@decoder
+vM68kDramController_Verilog
+R0
+!s110 1740108110
+!i10b 1
+!s100 EgEef4nLUeEa^IohzFM7j3
+I77`TH<=FEj:3O3b@3OdSm0
+R1
+R20
+S1
+R3
+w1722740648
+R21
+R22
+L0 14
+R6
+r1
+!s85 0
+31
+!s108 1740108110.000000
+R23
+R24
+!i113 1
+R9
+R10
+n@m68k@dram@controller_@verilog
+vnibble2hex
+R0
+R11
+!i10b 1
+!s100 AAKhIfmeVd42<BPUOch[k3
+I6=IGPG82YHTYM0;J_4m?O1
+R1
+R14
+S1
+R3
+R15
+R16
+R17
+L0 20
+R6
+r1
+!s85 0
+31
+R13
+R18
+R19
+!i113 1
+R9
+R10
+vtop
+R0
+R11
+!i10b 1
+!s100 XTjVdKo;?<zBnJfCm1R@I0
+IR[RJSLgD30RAz:RlDO1Y;0
+R1
+!s105 top_sv_unit
+S1
+R3
+w1739755395
+8E:/Personal_Project/FPGA_UART/verilog/top.sv
+FE:/Personal_Project/FPGA_UART/verilog/top.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/top.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/top.sv|
+!i113 1
+R9
+R10
+vvga_driver
+R0
+R11
+!i10b 1
+!s100 45>DGafQ8MbX5VfzIfkF^1
+I@IQRGbOn1_n6Th8`JI6;l0
+R1
+!s105 vga_driver_sv_unit
+S1
+R3
+w1722199699
+8E:/Personal_Project/FPGA_UART/verilog/vga_driver.sv
+FE:/Personal_Project/FPGA_UART/verilog/vga_driver.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/vga_driver.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/vga_driver.sv|
+!i113 1
+R9
+R10
+vvga_driver_tb
+R0
+R11
+!i10b 1
+!s100 8L5TWk?ODZGm`F[NmnmVa1
+IVNj;DLD=V^z8cPehSJ5?E3
+R1
+!s105 vga_driver_tb_sv_unit
+S1
+R3
+w1722146675
+8E:/Personal_Project/FPGA_UART/verilog/vga_driver_tb.sv
+FE:/Personal_Project/FPGA_UART/verilog/vga_driver_tb.sv
+L0 1
+R6
+r1
+!s85 0
+31
+R13
+!s107 E:/Personal_Project/FPGA_UART/verilog/vga_driver_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|E:/Personal_Project/FPGA_UART/verilog/vga_driver_tb.sv|
+!i113 1
+R9
+R10

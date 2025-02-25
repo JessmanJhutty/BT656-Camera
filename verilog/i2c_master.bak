@@ -1,0 +1,89 @@
+module  i2c_master (input wire clk,
+                    input wire reset,
+                    input wire load,
+                    input write,
+                    input [6:0] data,
+                    inout sda,
+                    inout logic scl);
+
+typedef enum logic[3:0] {
+    IDLE,
+    START,
+    READ,
+    WRITE,
+    WAIT,
+    SEND_ADDR,
+    RECEIVE_WACK,
+    RECEIVE_WACK2,
+    SEND_DATA,
+    STOP
+} State; 
+
+State current_state, nextState;
+
+wire [6:0] addr; 
+reg [7:0] count;
+reg addr_count_en;
+
+
+/////////// Counter Registers ///////////////////////////////
+always_ff @(posedge clk) begin
+    if(!addr_count_en)
+        count <= 8'd6;
+    else 
+        count <= count - 1;
+end
+
+
+////// State machine Register //////////////////
+
+always_ff @(posedge clk) begin
+    if(!reset)
+        current_state <= IDLE;
+    else
+        current_state <= nextState; 
+end
+
+
+/////////////  Output Combinational Logic Block ///////////////////
+always_comb begin
+    sda = 1'b1;
+    scl = 1'b1;
+    addr = 7'h41;
+    addr_count_en = 1;
+    nextState = current_state;
+    case(current_state) 
+        IDLE: begin
+            sda = 1'b1;
+            nextState = START;
+        end
+        START: begin
+            sda = 1;
+            addr_count_en = 0;
+            nextState = SEND_ADDR;
+        end
+        SEND_ADDR: begin
+            sda =  addr[count];
+            if(count == 0) nextState = RECEIVE_WACK;
+        end
+        RECEIVE_WACK:begin
+            addr_count_en = 0;
+            nextState = SEND_DATA;
+        end 
+        SEND_DATA: begin
+            sda = data[count];
+            nextState = RECEIVE_WACK2;
+        end
+        RECEIVE_WACK2: begin 
+            nextState = STOP;
+        end 
+        STOP: begin
+            sda = 1;
+            nextState = IDLE;
+        end
+    endcase
+
+end
+
+
+endmodule

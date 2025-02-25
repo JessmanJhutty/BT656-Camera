@@ -1,0 +1,113 @@
+# Reading D:/School/CPEN412/quartus/modelsim_ase/tcl/vsim/pref.tcl
+# do proj_ludo_run_msim_rtl_verilog.do
+# if ![file isdirectory proj_ludo_iputf_libs] {
+# 	file mkdir proj_ludo_iputf_libs
+# }
+# 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/School/CPEN412/quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+###### Libraries for IPUTF cores 
+###### End libraries for IPUTF cores 
+###### MIF file copy and HDL compilation commands for IPUTF cores 
+# 
+# 
+# vlog "E:/Personal_Project/FPGA_UART/sampler_sim/sampler.vo"
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:01 on Aug 10,2024
+# vlog -reportprogress 300 E:/Personal_Project/FPGA_UART/sampler_sim/sampler.vo 
+# -- Compiling module sampler
+# 
+# Top level modules:
+# 	sampler
+# End time: 15:36:01 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/Personal_Project/FPGA_UART/verilog {E:/Personal_Project/FPGA_UART/verilog/vga_driver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:01 on Aug 10,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Personal_Project/FPGA_UART/verilog" E:/Personal_Project/FPGA_UART/verilog/vga_driver.sv 
+# -- Compiling module vga_driver
+# 
+# Top level modules:
+# 	vga_driver
+# End time: 15:36:01 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Personal_Project/FPGA_UART/verilog {E:/Personal_Project/FPGA_UART/verilog/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:01 on Aug 10,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Personal_Project/FPGA_UART/verilog" E:/Personal_Project/FPGA_UART/verilog/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 15:36:01 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Personal_Project/FPGA_UART/verilog {E:/Personal_Project/FPGA_UART/verilog/i2cinput.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:01 on Aug 10,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Personal_Project/FPGA_UART/verilog" E:/Personal_Project/FPGA_UART/verilog/i2cinput.sv 
+# -- Compiling module i2cinput
+# 
+# Top level modules:
+# 	i2cinput
+# End time: 15:36:01 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Personal_Project/FPGA_UART/verilog {E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:01 on Aug 10,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Personal_Project/FPGA_UART/verilog" E:/Personal_Project/FPGA_UART/verilog/i2c_master.sv 
+# -- Compiling module i2c_master
+# 
+# Top level modules:
+# 	i2c_master
+# End time: 15:36:01 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Personal_Project/FPGA_UART/verilog {E:/Personal_Project/FPGA_UART/verilog/clock_divider.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:02 on Aug 10,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Personal_Project/FPGA_UART/verilog" E:/Personal_Project/FPGA_UART/verilog/clock_divider.sv 
+# -- Compiling module clock_divider
+# 
+# Top level modules:
+# 	clock_divider
+# End time: 15:36:02 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/Personal_Project/FPGA_UART/verilog {E:/Personal_Project/FPGA_UART/verilog/byte2ledhex.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:36:02 on Aug 10,2024
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/Personal_Project/FPGA_UART/verilog" E:/Personal_Project/FPGA_UART/verilog/byte2ledhex.sv 
+# -- Compiling module byte2ledhex
+# -- Compiling module nibble2hex
+# 
+# Top level modules:
+# 	byte2ledhex
+# End time: 15:36:02 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.top
+# vsim work.top 
+# Start time: 15:37:02 on Aug 10,2024
+# Loading sv_std.std
+# Loading work.top
+# Loading work.sampler
+# ** Error: (vsim-3033) E:/Personal_Project/FPGA_UART/sampler_sim/sampler.vo(45): Instantiation of 'altera_pll' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /top/pll_0 File: E:/Personal_Project/FPGA_UART/sampler_sim/sampler.vo
+#         Searched libraries:
+#             E:/Personal_Project/FPGA_UART/simulation/modelsim/rtl_work
+# Loading work.clock_divider
+# Loading work.i2cinput
+# Loading work.i2c_master
+# Loading work.byte2ledhex
+# Loading work.nibble2hex
+# Loading work.vga_driver
+# Error loading design
+# End time: 15:37:02 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0

@@ -1,0 +1,14 @@
+module clk_div_by2(input clk, output clk_o, input reset_n);
+
+logic d;
+always @(posedge clk) begin
+ if(!reset_n) begin
+    clk_o <=  0;
+ end else begin
+   clk_o <= ~clk_o;
+ end
+
+end
+
+
+endmodule

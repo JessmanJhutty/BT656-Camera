@@ -1,0 +1,16 @@
+bt 565 is a format in which video data is streamed. In this format we have 4:2:2 YCbCr subsampling. 
+
+It has a 27 Mhz clock whicih samples the 8 bit or 10 bitdata. There are two resolutions 720x486 (525/60) or 720x576 (625/50)
+
+the video format I am using is coming from a NSTC camera we are using 525/60 525 lines and 60 fields per second 
+
+There is EAV and SAV (end of active video and start of active video)
+
+
+EAV/SAV has 4 bytes to indicate it is EAV: FF 00 00 XY where XY: 1  FIELD BIT   Vertical Blanking Bit  Horizontal Blanking bit   P3 P2 P1 P0 
+
+E.g. SAV can have C7: 1 1 0 0 (Entering active video data)  and EAV can have DA: 1 1 0 1 (entered horizontal blanking) 
+
+Next when video data is starting its data is 4:2:2 Subsampled so data will appear in this fashion:
+
+Cb 0 Y 0 Cr 0 Y 1 Cb 1 Y 2 Cr 1 Y 3 ............ Cb 359 Y 718 Cr 359 Y 719

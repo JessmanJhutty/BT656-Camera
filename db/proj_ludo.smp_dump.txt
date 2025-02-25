@@ -1,0 +1,20 @@
+
+State Machine - |top|i2c_master:DUT|current_state
+Name current_state.STOP current_state.REPEATED_START current_state.READ_DATA_START current_state.RECEIVE_NACK current_state.READ_DATA current_state.SEND_DATA current_state.SEND_ADDR_READ current_state.SEND_REG_ADDRESS current_state.RECEIVE_WACK_SEND_REG_ADDR current_state.RECEIVE_WACK2 current_state.RECEIVE_WACK_RD current_state.RECEIVE_WACK_WR current_state.SEND_ADDR current_state.WRITE current_state.READ current_state.START current_state.IDLE 
+current_state.IDLE 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+current_state.START 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+current_state.READ 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+current_state.WRITE 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+current_state.SEND_ADDR 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+current_state.RECEIVE_WACK_WR 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+current_state.RECEIVE_WACK_RD 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+current_state.RECEIVE_WACK2 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+current_state.RECEIVE_WACK_SEND_REG_ADDR 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+current_state.SEND_REG_ADDRESS 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+current_state.SEND_ADDR_READ 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+current_state.SEND_DATA 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+current_state.READ_DATA 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.RECEIVE_NACK 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.READ_DATA_START 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.REPEATED_START 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+current_state.STOP 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
