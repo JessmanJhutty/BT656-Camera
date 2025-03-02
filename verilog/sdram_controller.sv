@@ -53,6 +53,7 @@ module DramController_Verilog (
 		reg  FPGAWritingtoSDram_H;								// When '1' enables FPGA data out lines leading to SDRAM to allow writing, otherwise they are set to Tri-State "Z"
 		reg  CPUReset_L;		
 		reg  LDQM_O, HDQM_O;
+		logic [15:0] Data_sel;
 		// 5 bit Commands to the SDRam
 
 		parameter PoweringUp = 5'b00000 ;					// take CKE & CS low during power up phase, address and bank address = dont'care
@@ -188,10 +189,12 @@ module DramController_Verilog (
 			// of course during a write, the dram WE signal will need to be driven low and it will respond by tri-stating its outputs lines so you can drive data in to it
 			// remember the Dram chip has bi-directional data lines, when you read from it, it turns them on, when you write to it, it turns them off (tri-states them)
 
-			if(FPGAWritingtoSDram_H == 1) 			// if CPU is doing a write, we need to turn on the FPGA data out lines to the SDRam and present Dram with CPU data 
-			 SDram_DQ	<= SDramWriteData ;
-			else
-				SDram_DQ	<= 16'bZZZZZZZZZZZZZZZZ;
+			
+			Data_sel = FPGAWritingtoSDram_H ? SDramWriteData : 16'hzzzz;
+			// if(FPGAWritingtoSDram_H == 1) 			// if CPU is doing a write, we need to turn on the FPGA data out lines to the SDRam and present Dram with CPU data 
+			//  SDram_DQ	<= SDramWriteData ;
+			// else
+			// 	SDram_DQ	<= 16'bZZZZZZZZZZZZZZZZ;
 						// otherwise tri-state the FPGA data output lines to the SDRAM for anything other than writing to it
 		
 			DramState <= CurrentState ;					// output current state - useful for debugging so you can see you state machine changing states et
@@ -212,7 +215,9 @@ module DramController_Verilog (
 	always@(negedge Clock)
 	begin
 		if(DramDataLatch_H == 1)      			// asserted during the read operation
-			DataOut <= SDram_DQ ;					// store 16 bits of data regardless of width - don't worry about tri state since that will be handled by buffers outside dram controller
+			DataOut <= SDram_DQ ;   // store 16 bits of data regardless of width - don't worry about tri state since that will be handled by buffers outside dram controller
+		else
+			DataOut <= Data_sel ;				// default is to output 0'sq		
 	end
 	
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-
@@ -344,7 +349,7 @@ module DramController_Verilog (
 			Command <= NOP;
 			if(RefreshTimerDone_H)
 			   NextState <= PrechargeBanks;
-			else if ( (DramSelect_L == 0) && (AS_L == 0)) begin // this condition needs rto be changed. CHNAGE REQ
+			else if ( (DramSelect_L == 0) ) begin // this condition needs rto be changed. CHNAGE REQ
 			    DramAddress <=  Address[12:0];
 			    BankAddress <= BA[1:0]; // should bank address be part of address its self?
 		            Command <= BankActivate; // activated the row  and the bank of DRAM
