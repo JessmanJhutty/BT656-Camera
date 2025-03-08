@@ -1,7 +1,7 @@
 module DramController_Verilog (
 			input Clock,								// used to drive the state machine- stat changes occur on positive edge
 			input Reset_L,     						// active low reset 
-			input unsigned [12:0] Address,		// address bus from 68000
+			input unsigned [22:0] Address,		// address bus from 68000
 			input unsigned [15:0] DataIn,			// data bus in from 68000
 			input DramSelect_L,     				// active low signal indicating dram is being addressed by 68000
 			input WE_L,  								// active low write signal, otherwise assumed to be read
@@ -350,7 +350,7 @@ module DramController_Verilog (
 			if(RefreshTimerDone_H)
 			   NextState <= PrechargeBanks;
 			else if ( (DramSelect_L == 0) ) begin // this condition needs rto be changed. CHNAGE REQ
-			    DramAddress <=  Address[12:0];
+			    DramAddress <=  Address[12:0];// row address
 			    BankAddress <= BA[1:0]; // should bank address be part of address its self?
 		            Command <= BankActivate; // activated the row  and the bank of DRAM
 			    if (WE_L) 
@@ -367,7 +367,7 @@ module DramController_Verilog (
 // Handle the stupid refresh	
 		else if (CurrentState == PrechargeBanks) begin
 			Command <= PrechargeAllBanks;
-			DramAddress <= 13'b000_10000000000;
+			DramAddress <= 13'b00_10000000000;
 			NextState <=  NOPAfterPrecharge_Re;
 		end
 		else if (CurrentState == NOPAfterPrecharge_Re) begin
@@ -393,7 +393,7 @@ module DramController_Verilog (
 		end
 // BEGIN the stage of read and write states
 		else if (CurrentState == IssueReadCommand) begin // CHANGE REQ: address selction
-			DramAddress <= {3'b001, Address[9:0]};
+			DramAddress <= {3'b001, Address[22:13]};
 			BankAddress <= BA[1:0];
 			Command <= ReadAutoPrecharge;
 			TimerValue <= 1;
@@ -415,7 +415,7 @@ module DramController_Verilog (
 			  NextState <= WaitCASLatency;
 		end 
 		else if (CurrentState == wait_Burst_write) begin
-			DramAddress <= {3'b001, Address[9:0]};
+			DramAddress <= {3'b001, Address[22:13]};
 			BankAddress <= BA[1:0];
 			LDQM_O <=  0;
 			HDQM_O <=  0;

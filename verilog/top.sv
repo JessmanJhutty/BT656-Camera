@@ -27,6 +27,8 @@ module top(input logic CLK_50,
 	 wire reset, i2c_clk, start, read, clk_25, AV, field, Data_Valid;
 	 wire [7:0] data_to_send, data_to_read,reg_dest;
 	 wire [15:0] YCbCr;
+	 wire [11:0] wrusedw_sig;
+	 wire rdempty_wr_sig;
 
 	 
 	 // ** CLOCK DOMAINS **
@@ -48,17 +50,22 @@ module top(input logic CLK_50,
 	 image_write_fifo	image_write_fifo_inst (
 			.data ( YCbCr ),
 			.rdclk ( CLK_100 ),
-			.rdreq ( Data_valid ),
+			.rdreq ( rd_strb_sig ),
 			.wrclk ( TD_CLK_27 ),
 			.wrreq ( Data_valid ),
 			.q ( q_sig ),
 			.rdempty ( rdempty_sig ),
-			.wrusedw ( rdusedw_sig ),
+			.wrusedw ( wrusedw_sig ),
 			.wrfull ( wrfull_sig )
 	 );
 	 
-	 
-	 
+	 rd_strb_gen rd_strb_gen_inst (
+			.rdempty ( rdempty_sig ),
+			.wrusedw ( wrusedw_sig ),
+			.rd_strb ( rd_strb_sig ),
+			.wrfull ( wrfull_sig )
+	 );
+
 	 DramController_Verilog   sdram_ctrl(
 			 .Clock(CLK_100),								// used to drive the state machine- stat changes occur on positive edge
 			 .Reset_L(reset),     						// active low reset 
